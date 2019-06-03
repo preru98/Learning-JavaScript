@@ -110,7 +110,37 @@ Var8.addEventListener('click',function()
     Var8.style.color='red';
     myObj['C8']='X';
     CheckStatus('C8');
-})
+})<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TIC-TAC-TOE</title>
+</head>
+<body>
+    <table id ="table1" border="1" cellpadding="10" cellspacing="10">
+        <tr>
+            <td id='C1'> </td>
+            <td id='C2'>b</td>
+            <td id='C3'>c</td>
+        </tr>
+        <tr>
+                <td id='C4'>d</td>
+                <td id='C5'>e</td>
+                <td id='C6'>f</td>
+        </tr>
+        <tr>
+                    <td id='C7'>g</td>
+                    <td id='C8'>h</td>
+                    <td id='C9'>i</td>
+        </tr>
+    </table>
+    <button id='button1'>Click me! for results</button>
+  <script src='tic-tae-toe-simple.js'></script>
+  
+</body>
+</html>
 Var8.addEventListener('dblclick',function()
 {
     Var8.textContent='O';
