@@ -27,4 +27,25 @@ Heading2.addEventListener('mouseover',function(){
 });
 
 
+/*
+
+TO PICK AN ELEMENT(S)
+
+1. getElementByID('id_here_only');
+
+2. getElementsByClassName('class_name_here_only'); 
+
+3. getElementsByTag('tag_here_only'); 
+
+4. querySelector('#id_here');            //For ID (first instance only)
+
+5. querySelector('.class_name_here');    //For class (first instance only)
+
+6. querySelectorAll('#id_here');         //For ID
+
+5. querySelectorAll('.class_name_here'); //For class
+
+*/
+
+
 
