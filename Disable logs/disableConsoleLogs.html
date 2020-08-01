@@ -1,0 +1,14 @@
+<!-- //Default behavior overridden via returning false: -->
+<body>
+    <h2>Disabled</h2>
+    <script type="text/javascript">
+    window.console.log=()=>{
+        console.error("Developer operations are blocked!")
+        window.console.log=()=>{
+            return false
+        }   
+    }
+</script>
+</body>
+<!--Window console-->
+
