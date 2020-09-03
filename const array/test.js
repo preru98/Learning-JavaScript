@@ -21,5 +21,11 @@ let remAll = (array, val) =>{
     }
     console.log(array);
 }
-remAll(c, 2);
+
+let remFilterAll = (array, val) => {
+    console.log(array);
+    newArray=array.filter(element => element!=val )
+    console.log(newArray);
+}
+remFilterAll(c, 2);
 
