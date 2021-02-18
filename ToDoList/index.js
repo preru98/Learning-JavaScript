@@ -11,10 +11,18 @@ function getItemFromUser(){
 }
 
 function appendToList(newItem){
-    var newListObject = document.createElement('li');
+    let newListObject = document.createElement('li');
     newListObject.innerText = newItem;
+    let crossButton =  document.createElement('button');
+    crossButton.innerText="x";
+    newListObject.appendChild(crossButton);
     let todoList =  document.getElementById('todo-list');
     todoList.appendChild(newListObject);
     document.getElementById('item-value').value="";
+    
+    crossButton.addEventListener('click',(event) => {
+        event.target.parentElement.remove();
+        //console.log(event.target.parentElement);
+    });
 }
 
