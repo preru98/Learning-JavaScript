@@ -13,16 +13,35 @@ function getItemFromUser(){
 function appendToList(newItem){
     let newListObject = document.createElement('li');
     newListObject.innerText = newItem;
+    
     let crossButton =  document.createElement('button');
     crossButton.innerText="x";
+    
+    let moveUp =  document.createElement('button');
+    moveUp.innerText="^";
+
+    let moveDown =  document.createElement('button');
+    moveDown.innerText="V";
+    
     newListObject.appendChild(crossButton);
+    newListObject.appendChild(moveUp);
+    newListObject.appendChild(moveDown);
+    
     let todoList =  document.getElementById('todo-list');
     todoList.appendChild(newListObject);
+    
     document.getElementById('item-value').value="";
     
     crossButton.addEventListener('click',(event) => {
         event.target.parentElement.remove();
-        //console.log(event.target.parentElement);
+    });
+
+    moveUp.addEventListener('click',(event) => {
+        event.target.parentElement.parentElement.insertBefore(newListObject, newListObject.previousElementSibling);
+    });
+    
+    moveDown.addEventListener('click',(event) => {
+        event.target.parentElement.parentElement.insertBefore(newListObject.nextElementSibling, newListObject);
     });
 }
 
