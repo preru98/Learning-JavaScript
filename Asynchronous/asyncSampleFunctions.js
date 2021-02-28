@@ -1,14 +1,16 @@
-//Simulating delay
-function download(){
+//Solution to functions executing in undesirable order using callbacks
+function download(downloaded){
     console.log('Downloading...');
     setTimeout(()=> {
         console.info('Download complete');
+        downloaded();
     }, 4000);
 };
-function compress (){
+function compress (compressed){
     console.log('Compressing...');
     setTimeout(()=> {
         console.info('Operation Successful');
+        compressed();
     }, 2000);
 };
 
@@ -20,6 +22,8 @@ function upload (){
 };
 
 //Executes in undesirable order.
-download();
-compress();
-upload();
+download(() => {
+    compress(() => {
+        upload();
+    });
+});
