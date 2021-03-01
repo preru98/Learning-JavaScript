@@ -1,4 +1,4 @@
-//Solution to functions executing in undesirable order using callbacks
+//Solution to functions executing in desirable order using callbacks
 function download(downloaded){
     console.log('Downloading...');
     //simulate error
